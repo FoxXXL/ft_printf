@@ -44,12 +44,12 @@ char	*ft_strrep(char *base, char *sub, char *find)
 {
 	int i;
 	int k;
-	int x;
+	int j;
 	char *mod;
 	int space;
 
 	i = 0;
-	x = 0;
+	j = 0;
 	k = 0;
 	space = ft_strlen(base) - 2 + ft_strlen(sub);
 	mod = (char *)malloc(sizeof(char *) + space);
@@ -63,17 +63,17 @@ char	*ft_strrep(char *base, char *sub, char *find)
 				i++;
 				k++;
 			}
-			x += 2;
+			j += 2;
 			i--;
 		}
 		else
 		{
-			if (base[x]) {
-				mod[i] = base[x];
+			if (base[j]) {
+				mod[i] = base[j];
 			}
 			else
 				break;
-			x++;
+			j++;
 		}
 		i++;
 	}
